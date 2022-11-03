@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+/* Tailwind css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tilwind alert components */
+@layer components {
+  .alert {
+    @apply flex flex-col p-4 pt-2 w-full border-l-8;
+  }
+
+  .alert-title {
+    @apply font-semibold italic text-lg;
+  }
+
+  .alert-content {
+    @apply leading-tight text-sm;
+  }
+
+  .alert-info {
+    @apply bg-blue-100 border-blue-500
+  }
+
+  .alert-info-title {
+    @apply text-blue-500;
+  }
+
+  .alert-info-content {
+    @apply text-blue-800;
+  }
+
+  .alert-warning {
+    @apply bg-red-100 border-red-500
+  }
+
+  .alert-warning-title {
+    @apply text-red-500;
+  }
+
+  .alert-warning-content {
+    @apply text-red-800;
+  }
+}
+/* :host ::ng-deep .ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem.ui-state-active { */
+  /* background-color: #965213; */
+  /* <Replace your custom color> */
+  /* border: 1px solid #837ad6; */
+/* } */
+
+.box {
+  color: white;
+  background-color: green;
+  min-height: 150px;
+  padding-top: 10%;
+  padding-left: 15%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}

@@ -1,0 +1,22 @@
+<div class="w:1/4">
+  <div *ngIf="!authService.getUser()">
+    <div class="p-2 m-8">
+      <label for="username">User:</label>
+      <input pInputText type="text" class="p-inputtext-lg" name="username" #username />
+      </div>
+    <div class="p-2 m-8">
+      <label for="password">Password:</label>
+      <input pInputText class="p-inputtext-lg" type="password" name="password" #password>
+    </div>
+    <div class="p-2 m-8">
+      <p-button (click)="login(username.value, password.value)">Submit</p-button>
+    </div>
+  </div>
+  <div class="well" *ngIf="authService.getUser()">
+    Logged in as <b>{{ authService.getUser() }}</b>
+    <a href (click)="logout()">Log out</a>
+    </div>
+    <div class="bg-red-600" role="alert" *ngIf="message">
+      {{ message }}
+      </div>
+</div>
